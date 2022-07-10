@@ -4,7 +4,6 @@ import mentionStyle from "./mentionStyle";
 import merge from "lodash/merge";
 import mentionsInputStyle from "./mentionsInputStyle";
 
-import "./form-style.css";
 import CustomForm from "./CustomForm";
 
 function App() {

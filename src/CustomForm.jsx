@@ -58,7 +58,6 @@ const CustomForm = () => {
     <div className={styles.form}>
       <section className={styles.formCard}>
         <h2 className={styles.formTitle}>Comment Form</h2>
-        <h1>Current date is {date}</h1>
         <input
           type="text"
           value={formState.username}
