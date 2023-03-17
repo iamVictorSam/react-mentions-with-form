@@ -2,9 +2,9 @@ import { useState, useCallback, useEffect } from "react";
 import { Mention, MentionsInput } from "react-mentions";
 import mentionStyle from "./mentionStyle";
 import merge from "lodash/merge";
-import mentionsInputStyle from "./mentionsInputStyle";
+import style from "./style.module.css";
 
-import CustomForm from "./CustomForm";
+// import CustomForm from "./CustomForm";
 
 function App() {
   const [result, setResult] = useState("");
@@ -13,19 +13,19 @@ function App() {
   const emailRegex = /(([^\s@]+@[^\s@]+\.[^\s@]+))$/;
   const notMatchingRegex = /($a)/;
 
-  let customStyle = merge({}, mentionsInputStyle, {
-    input: {
-      overflow: "auto",
-      height: 80,
-      width: 500,
-    },
-    highlighter: {
-      boxSizing: "border-box",
-      overflow: "hidden",
-      height: 80,
-      width: 500,
-    },
-  });
+  // let customStyle = merge({}, style, {
+  //   input: {
+  //     overflow: "auto",
+  //     height: 80,
+  //     width: 500,
+  //   },
+  //   highlighter: {
+  //     boxSizing: "border-box",
+  //     overflow: "hidden",
+  //     height: 80,
+  //     width: 500,
+  //   },
+  // });
 
   const data = [
     {
@@ -85,11 +85,22 @@ function App() {
   };
 
   return (
+    // <div>
+    //   <MentionsInput
+    //     // value={value}
+    //     // onChange={onChange}
+    //     className="mentions"
+    //     classNames={style}
+    //     a11ySuggestionsListLabel={"Suggested mentions"}
+    //   >
+    //     <Mention data={data} className={style.mentions__mention} />
+    //   </MentionsInput>
+    // </div>
     <div className="App" style={{ padding: "2rem" }}>
       {/* Working with Default mentions */}
       <h2>Lets get started</h2>
       {/* <MentionsInput
-        style={mentionsInputStyle}
+        style={style}
         value={result}
         onChange={(e) => setResult(e.target.value)}
       >
@@ -101,7 +112,7 @@ function App() {
       <h2>Single line Input</h2>
       <MentionsInput
         singleLine
-        style={mentionsInputStyle}
+        style={style}
         value={result}
         onChange={(e) => setResult(e.target.value)}
       >
@@ -114,11 +125,11 @@ function App() {
 
       <h2>Using Multiple Trigger pattern</h2>
       <MentionsInput
-        style={mentionsInputStyle}
+        style={style}
         value={result}
         onChange={(e) => setResult(e.target.value)}
       >
-        <Mention style={mentionStyle} data={data} />
+        <Mention style={mentionStyle.mention__mention} data={data} />
 
         <Mention
           trigger={emailRegex}
@@ -139,7 +150,7 @@ function App() {
       <MentionsInput
         value={result}
         onChange={(e) => setResult(e.target.value)}
-        style={customStyle}
+        // style={customStyle}
         placeholder={"Mention people using '@'"}
         a11ySuggestionsListLabel={"Suggested mentions"}
       >
@@ -153,7 +164,7 @@ function App() {
       <br />
       <h2>Displaying ID</h2>
       <MentionsInput
-        style={mentionsInputStyle}
+        style={style}
         value={result}
         onChange={(e) => setResult(e.target.value)}
       >
@@ -174,7 +185,7 @@ function App() {
       <MentionsInput
         value={result}
         onChange={(e) => setResult(e.target.value)}
-        style={mentionsInputStyle}
+        style={style}
         placeholder="Mention any JsonPlaceholder username by typing `@` followed by at least one character"
         a11ySuggestionsListLabel={
           "Suggested JsonPlaceholder username for mention"
@@ -197,7 +208,7 @@ function App() {
       <MentionsInput
         value={result}
         onChange={(e) => setResult(e.target.value)}
-        style={mentionsInputStyle}
+        style={style}
         placeholder={"Press ':' for emojis, mention people using '@'"}
       >
         <Mention
