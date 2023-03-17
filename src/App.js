@@ -111,8 +111,7 @@ function App() {
       <br />
       <br />
       <br />
-      // <br />
-      // <br />
+
       <h2>Using Multiple Trigger pattern</h2>
       <MentionsInput
         style={mentionsInputStyle}
