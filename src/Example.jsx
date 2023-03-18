@@ -8,22 +8,30 @@ const MentionExample = () => {
 
   const data = [
     {
-      id: "Avatar",
-      display: "Avatar Aang",
+      id: "Ichigo",
+      display: "Kurosaki Ichigo",
     },
     {
-      id: "Spiderman",
-      display: "Peter Parker",
+      id: "Madara",
+      display: "Madara Uchiha",
+    },
+    {
+      id: "Nobody",
+      display: "nobody@someone.whoknows",
+    },
+    {
+      id: "Iamvictorsam",
+      display: "iamvictorsam@gmail.com",
     },
   ];
 
   return (
     <MentionsInput
-      // classNames={style}
+      classNames={style}
       value={result}
       onChange={(e) => setResult(e.target.value)}
     >
-      <Mention data={data} />
+      <Mention className={style.mentions__mention} data={data} />
     </MentionsInput>
   );
 };

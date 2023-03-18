@@ -43,10 +43,10 @@ const CustomForm = () => {
       },
     ]);
 
-      setFormState({
-        username: "",
-        comment: "",
-      });
+    setFormState({
+      username: "",
+      comment: "",
+    });
   };
 
   const current = new Date();
