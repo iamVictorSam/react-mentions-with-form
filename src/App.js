@@ -7,7 +7,7 @@ import mentionsInputStyle from "./mentionsInputStyle";
 import CustomForm from "./CustomForm";
 
 function App() {
-  const [value, setValue] = useState("");
+  const [result, setResult] = useState("");
   const [emojiValue, setEmojiValue] = useState([]);
 
   const emailRegex = /(([^\s@]+@[^\s@]+\.[^\s@]+))$/;
@@ -27,18 +27,22 @@ function App() {
     },
   });
 
-  const users = [
+  const data = [
     {
-      id: "isaac",
-      display: "Isaac Newton",
+      id: "Ichigo",
+      display: "Kurosaki Ichigo",
     },
     {
-      id: "sam",
-      display: "Sam Victor",
+      id: "Madara",
+      display: "Madara Uchiha",
     },
     {
-      id: "emma",
-      display: "emmanuel@nobody.com",
+      id: "Nobody",
+      display: "nobody@someone.whoknows",
+    },
+    {
+      id: "Iamvictorsam",
+      display: "iamvictorsam@gmail.com",
     },
   ];
 
@@ -81,27 +85,27 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ padding: "2rem" }}>
       {/* Working with Default mentions */}
-   {/*   <h2>Lets get started</h2>
-      <MentionsInput
+      <h2>Lets get started</h2>
+      {/* <MentionsInput
         style={mentionsInputStyle}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
       >
-        <Mention style={mentionStyle} data={users} />
+        <Mention style={mentionStyle} data={data} />
       </MentionsInput>
       <br />
       <br />
-      <br />
-      <h2>Using a Single line Input</h2>
+      <br /> */}
+      <h2>Single line Input</h2>
       <MentionsInput
         singleLine
         style={mentionsInputStyle}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
       >
-        <Mention style={mentionStyle} data={users} />
+        <Mention style={mentionStyle} data={data} />
       </MentionsInput>
       <br />
       <br />
@@ -112,10 +116,10 @@ function App() {
       <h2>Using Multiple Trigger pattern</h2>
       <MentionsInput
         style={mentionsInputStyle}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
       >
-        <Mention style={mentionStyle} data={users} />
+        <Mention style={mentionStyle} data={data} />
 
         <Mention
           trigger={emailRegex}
@@ -134,13 +138,13 @@ function App() {
       <br />
       <h2>Scrollable Container</h2>
       <MentionsInput
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
         style={customStyle}
         placeholder={"Mention people using '@'"}
         a11ySuggestionsListLabel={"Suggested mentions"}
       >
-        <Mention trigger="@" data={users} style={mentionStyle} />
+        <Mention trigger="@" data={data} style={mentionStyle} />
       </MentionsInput>
       <br />
       <br />
@@ -151,13 +155,13 @@ function App() {
       <h2>Displaying ID</h2>
       <MentionsInput
         style={mentionsInputStyle}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
       >
         <Mention
           displayTransform={(id) => `<!--${id}-->`}
           style={mentionStyle}
-          data={users}
+          data={data}
         />
       </MentionsInput>
       <br />
@@ -166,11 +170,11 @@ function App() {
       <br />
       <br />
       <br />
-      {/* Working with external data */}
-     {/* <h2>Fetching response from external sources</h2>
+      {/* Working with external data
+     <h2>Fetching response from external sources</h2>
       <MentionsInput
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
         style={mentionsInputStyle}
         placeholder="Mention any JsonPlaceholder username by typing `@` followed by at least one character"
         a11ySuggestionsListLabel={
@@ -192,8 +196,8 @@ function App() {
       <br />
       <h3>Emoji support</h3>
       <MentionsInput
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
         style={mentionsInputStyle}
         placeholder={"Press ':' for emojis, mention people using '@'"}
       >
@@ -201,7 +205,7 @@ function App() {
           trigger="@"
           displayTransform={(username) => `@${username}`}
           markup="@__id__"
-          data={users}
+          data={data}
           regex={/@(\S+)/}
           style={mentionStyle}
           appendSpaceOnAdd
@@ -216,8 +220,8 @@ function App() {
       <br />
       <br />
       <br />
-      <br />*/}
-      <CustomForm/>
+      <br />
+      {/* <CustomForm/> */}
     </div>
   );
 }

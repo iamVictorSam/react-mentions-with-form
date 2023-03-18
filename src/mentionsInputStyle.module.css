@@ -1,0 +1,52 @@
+.control {
+  background-color: #fff;
+  width: 25rem;
+  max-width: 25rem;
+  height: 5rem;
+  font-size: 16px;
+}
+
+&[multiLine] .control {
+  font-family: monospace;
+  min-height: 60px;
+}
+
+&[multiLine] .highlighter {
+  padding: 9px;
+  border: 1px solid transparent;
+}
+
+&[multiLine] input {
+  padding: 9px;
+  border: 1px solid silver;
+}
+
+&[singleLine] {
+  display: inline-block;
+  width: 180px;
+}
+
+&[singleLine] .highlighter {
+  padding: 1px;
+  border: 2px inset transparent;
+}
+
+&[singleLine] input {
+  padding: 1px;
+  border: 2px inset;
+}
+
+.suggestions .list {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+.suggestions .item {
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.suggestions .item.focused {
+  background-color: #cee4e5;
+}
