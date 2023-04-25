@@ -4,7 +4,6 @@ import style from "./style.module.css";
 
 const MentionExample = () => {
   const [result, setResult] = useState("");
-  const [emojiValue, setEmojiValue] = useState([]);
 
   const data = [
     {
@@ -25,14 +24,34 @@ const MentionExample = () => {
     },
   ];
 
+  // https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json
+
   return (
-    <MentionsInput
-      classNames={style}
-      value={result}
-      onChange={(e) => setResult(e.target.value)}
-    >
-      <Mention className={style.mentions__mention} data={data} />
-    </MentionsInput>
+    <>
+      <h1>Multiple mention Trigger Method</h1>
+      <MentionsInput
+        classNames={style}
+        value={result}
+        onChange={(e) => setResult(e.target.value)}
+      >
+        <Mention className={style.mentions__mention} data={data} />
+        <Mention
+          className={style.mentions__mention}
+          data={data}
+          trigger={"#"}
+        />
+        <Mention
+          className={style.mentions__mention}
+          data={data}
+          trigger={":site"}
+        />
+        <Mention
+          className={style.mentions__mention}
+          data={data}
+          trigger={"?email"}
+        />
+      </MentionsInput>
+    </>
   );
 };
 

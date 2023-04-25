@@ -1,80 +1,66 @@
-/* mentions */
+
 .mentions {
   margin: 2em 0;
 }
 
-.mentions__control {
-  display: inline-block;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .mentions--singleLine .mentions__control {
-  width: 130px;
-}
+  display: inline-block;
+  padding-left: 10px;
 
-.mentions--multiLine .mentions__control {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
-}
-
-.mentions__highlighter {
-  padding: 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  min-height: 50px;
 }
 
 .mentions--singleLine .mentions__highlighter {
-  border-radius: 5px;
-}
+  padding: 1px;
+  border: 2px inset transparent;
 
-.mentions--multiLine .mentions__highlighter {
-  border-radius: 10px;
-}
-
-.mentions__input {
-  padding: 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
 }
 
 .mentions--singleLine .mentions__input {
-  width: 300px;
+  border: 2px inset grey;
+  font-style: italic;
+  padding-left: 10px;
 }
 
+
+.mentions--multiLine .mentions__control {
+  font-family: monospace;
+  font-size: 16pt;
+}
+.mentions--multiLine .mentions__highlighter {
+  border: 1px solid transparent;
+  padding: 9px;
+  min-height: 63px;
+}
 .mentions--multiLine .mentions__input {
-  width: 100%;
-  min-height: 100px;
+  border: 1px solid silver;
+  padding: 9px;
+  outline: 0;
+  font-style: italic;
 }
 
 .mentions__suggestions__list {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
-  font-size: 12px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 10pt;
 }
 
 .mentions__suggestions__item {
   padding: 5px 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .mentions__suggestions__item--focused {
-  background-color: #97d8ba;
+  background-color: #639551fe;
   color: #fff;
 }
 
 .mentions__mention {
   position: relative;
   z-index: 1;
+  color: green;
   font-style: italic;
-  color: #333;
-  text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
-    -1px -1px 1px #fff;
-  pointer-events: none;
+  text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white,
+    -1px -1px 1px white;
   text-decoration: none;
+  pointer-events: none;
 }

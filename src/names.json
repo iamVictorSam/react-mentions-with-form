@@ -1,0 +1,79 @@
+{
+  "people": [
+    {
+      "name": "Alice",
+      "age": 25,
+      "occupation": "Software Engineer"
+    },
+    {
+      "name": "Bob",
+      "age": 32,
+      "occupation": "Accountant"
+    },
+    {
+      "name": "Charlie",
+      "age": 43,
+      "occupation": "Architect"
+    },
+    {
+      "name": "David",
+      "age": 37,
+      "occupation": "Marketing Manager"
+    },
+    {
+      "name": "Eva",
+      "age": 29,
+      "occupation": "Graphic Designer"
+    },
+    {
+      "name": "Frank",
+      "age": 41,
+      "occupation": "Real Estate Agent"
+    },
+    {
+      "name": "Gina",
+      "age": 23,
+      "occupation": "Journalist"
+    },
+    {
+      "name": "Henry",
+      "age": 48,
+      "occupation": "Financial Advisor"
+    },
+    {
+      "name": "Isabella",
+      "age": 27,
+      "occupation": "Doctor"
+    },
+    {
+      "name": "Jacob",
+      "age": 31,
+      "occupation": "Lawyer"
+    },
+    {
+      "name": "Katie",
+      "age": 36,
+      "occupation": "Teacher"
+    },
+    {
+      "name": "Liam",
+      "age": 30,
+      "occupation": "Web Developer"
+    },
+    {
+      "name": "Mia",
+      "age": 28,
+      "occupation": "UX Designer"
+    },
+    {
+      "name": "Nathan",
+      "age": 39,
+      "occupation": "Sales Manager"
+    },
+    {
+      "name": "Olivia",
+      "age": 26,
+      "occupation": "Writer"
+    }
+  ]
+}
